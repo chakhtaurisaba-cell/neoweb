@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="NEOWEB (2).png">
+
+
 <style>
   :root{
     --ink: #0A2740;
@@ -61,12 +64,21 @@
   .logo{display:flex;align-items:center;gap:10px;}
   .logo-img{height:30px;width:auto;display:block;}
   footer .logo-img{height:26px;}
-  .nav-links{display:flex;gap:30px;font-size:14px;color:var(--text-dim);}
+  .nav-links{
+    display:flex;
+    gap:30px;font-size:14px;
+    color:var(--text-dim);
+    
+  }
+  .nav-links a{
+    transition: 0.3s;
+  }
   .nav-links a:hover{color:var(--amber);}
   .nav-cta{
     font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;
     border:1px solid var(--amber);color:var(--amber);padding:9px 16px;
     letter-spacing:.03em;
+    transition: 0.3s;
   }
   .nav-cta:hover{background:var(--amber);color:var(--text-navy);}
   .burger{display:none;}
@@ -103,6 +115,7 @@
   .btn-ghost{
     border:1px solid var(--line);color:var(--text-light);
     padding:14px 22px;font-size:15px;font-family:'JetBrains Mono',monospace;
+    transition: 0.5s;
   }
   .btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
 
@@ -245,7 +258,7 @@
   }
   .final-cta h2{font-size:clamp(28px,4vw,44px);font-weight:800;margin-bottom:18px;}
   .final-cta p{color:var(--text-dim);margin-bottom:34px;font-size:16px;}
-
+  
   .social-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
   .social-btn{
     display:inline-flex;align-items:center;gap:10px;
@@ -369,7 +382,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">გეგმები</div>
-      <h2>აირჩიეთ თქვენი პროექტის მასშტაბი</h2>
+      <h2>აირჩიეთ თქვენი პროექტის მაშტაბი</h2>
       <p>სამი მზა გეგმა — პატარა ვიზიტკარტიდან სრულ ბიზნეს-პლატფორმამდე.</p>
     </div>
 
@@ -398,7 +411,7 @@
       </div>
 
       <div class="card featured reveal">
-        <div class="stamp">POPULARI</div>
+        <div class="stamp">POPULAR</div>
         <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
         <div class="card-tag">PLAN / 02 — BUSINESS</div>
         <h3>ბიზნესი</h3>
@@ -505,7 +518,7 @@
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   }, {threshold:0.15});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
 
 </body>
